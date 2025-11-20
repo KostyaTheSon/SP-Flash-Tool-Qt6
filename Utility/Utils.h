@@ -3,8 +3,10 @@
 
 #include <QString>
 #include <QDir>
-#include <QTextCodec>
 #include <QImage>
+#if QT_VERSION >= 0x060000
+#include <QTextCodec>
+#endif
 #include <sstream>
 #include <map>
 #include "../BootRom/brom.h"
@@ -106,6 +108,10 @@ QImage AddStringToImage(const QString& imagePath, const QString& str, const QStr
 bool parserJSONFile(const QString filePath, QtJson::JsonObject &jsonObject);
 
 inline void SetTextCodec(void) {
+#if QT_VERSION >= 0x060000
+    // Qt6 doesn't have these functions anymore - they are deprecated
+    // Text encoding is handled automatically in Qt6
+#else
 #ifdef _WIN32
     QTextCodec *coder = QTextCodec::codecForName("System");
 #else
@@ -114,15 +120,21 @@ inline void SetTextCodec(void) {
     QTextCodec::setCodecForTr(coder);
     QTextCodec::setCodecForLocale(coder);
     QTextCodec::setCodecForCStrings(coder);
+#endif
 }
 
 inline QTextCodec * GetTextCodec(void) {
+#if QT_VERSION >= 0x060000
+    // Qt6: Return nullptr since QTextCodec functions are deprecated
+    return nullptr;
+#else
 #ifdef _WIN32
     static QTextCodec *codec = QTextCodec::codecForName("System");
 #else
     static QTextCodec *codec = QTextCodec::codecForName("UTF-8");
 #endif
     return codec;
+#endif
 }
 const static std::map<QString, U32>::value_type INIT_VALUE[]=
 {
