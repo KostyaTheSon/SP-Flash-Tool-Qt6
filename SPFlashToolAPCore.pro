@@ -7,8 +7,9 @@ TARGET = flash_tool
 QT    += xml
 QT += network widgets
 greaterThan(QT_MAJOR_VERSION, 5): QT += webenginewidgets
-else: QT += webkitwidgets
+else: QT += webenginewidgets
 #QT += testlib
+
 
 # CONFIG   += console
 #CONFIG -= app_bundle
