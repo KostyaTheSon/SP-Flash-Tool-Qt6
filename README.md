@@ -1,12 +1,13 @@
-# SP-Flash-Tool-src
-Source code SP Flash Tool v5.1720
+# SP Flash Tool Qt6 Version
 
-Source code SP Flash Tool v5.1720 for compile to another x86 computers
+The source code of the tool is SP Flash Tool **v5.1720**
 
-Project can be build with QT Lib 4.8 or lower.
+# FAQ:
 
-Requered: QT WebKit and QTextCodec :: setCodecForTr () and QTextCodec :: setCodecForCStrings ()
+## Is it different?
 
-SP Flash Tool - program to flash firmware for MTK based smartphones.
+Not really, Except the UI being ported from Qt4 (version 4.8) to Qt6.
 
-Hot key: SP_Flash_Tool_src SP_Flash_Tool Source code
+## Is it AI-Generated?
+
+Almost. But thanks to Qwen Coder (which is AI), The UI will be completely ported to Qt6 for compatability with new distros.
