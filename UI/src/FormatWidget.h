@@ -2,7 +2,7 @@
 #define FORMATWIDGET_H
 
 #include "TabWidgetBase.h"
-#include <QtGui>
+#include <QtWidgets>
 #include "../../BootRom/flashtool_api.h"
 #include "../../Setting/FormatSetting.h"
 #include "../../Setting/PlatformSetting.h"

@@ -1,10 +1,10 @@
 #include <QtCore/QCoreApplication>
-#include <QtGui/QApplication>
-#include <QSplashScreen>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QSplashScreen>
 #include <QString>
 #include <iostream>
-#include <QDir>
-#include <QMessageBox>
+#include <QtCore/QDir>
+#include <QtWidgets/QMessageBox>
 
 #include "UI/src/MainWindow.h"
 #include "ConsoleMode/ConsoleModeEntry.h"

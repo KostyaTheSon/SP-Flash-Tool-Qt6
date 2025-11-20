@@ -270,7 +270,7 @@
              <bool>false</bool>
             </property>
             <property name="textDirection">
-             <enum>QProgressBar::TopToBottom</enum>
+             <enum>QProgressBar::BottomToTop</enum>
             </property>
             <property name="format">
              <string>%p%</string>

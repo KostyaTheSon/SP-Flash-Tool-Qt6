@@ -8,7 +8,7 @@
 #include "../../Setting/PlatformSetting.h"
 #include <QSharedPointer>
 #include <list>
-#include <QtGui>
+#include <QtWidgets>
 #include <QStringList>
 #include "MainController.h"
 #include "ScatterObserver.h"

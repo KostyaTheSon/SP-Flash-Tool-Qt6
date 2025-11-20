@@ -2,7 +2,7 @@
 #define DLDELEGATE_H
 
 #include <QObject>
-#include <QtGui>
+#include <QtWidgets>
 #include "TabWidgetBase.h"
 #include "../../Public/AppTypes.h"
 #include "../../Utility/Utils.h"

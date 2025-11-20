@@ -2,7 +2,7 @@
 #include "MainWindow.h"
 #include "ui_WelcomeWidget.h"
 #include "../../Host/Inc/RuntimeMemory.h"
-#include <QtWebKit>
+#include <QtWebEngineWidgets>
 
 WelcomeWidget::WelcomeWidget(QTabWidget *parent, MainWindow *window):
     TabWidgetBase(0, tr("W&elcome"), parent),

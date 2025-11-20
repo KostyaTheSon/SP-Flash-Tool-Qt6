@@ -2,7 +2,7 @@
 #define BROMADAPTERWIDGET_H
 
 #include <QWidget>
-#include <QtGui>
+#include <QtWidgets>
 #include "TabWidgetBase.h"
 #include "../../BootRom/flashtool_api.h"
 
