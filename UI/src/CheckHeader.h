@@ -4,7 +4,7 @@
 #include <QHeaderView>
 #include <QPainter>
 #include <QMouseEvent>
-#include <QtGui>
+#include <QtWidgets>
 
 namespace Ui{
 class CheckHeader;

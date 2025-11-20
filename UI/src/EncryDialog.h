@@ -2,7 +2,7 @@
 #define ENCRYDIALOG_H
 
 #include <QDialog>
-#include <QtGui>
+#include <QtWidgets>
 
 namespace Ui {
 class EncryDialog;

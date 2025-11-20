@@ -4,8 +4,8 @@
 #QT += core
 #QT -= gui
 TARGET = flash_tool
-QT    += xmlpatterns
-QT += webkit network
+QT    += xml
+QT += webenginewidgets network widgets
 #QT += testlib
 
 # CONFIG   += console

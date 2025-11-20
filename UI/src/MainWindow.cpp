@@ -45,7 +45,7 @@
 #include "../../BootRom/internal_api.h"
 
 #include <QtDebug>
-#include <QtGui>
+#include <QtWidgets>
 #include <algorithm>
 
 MainWindow::MainWindow(QWidget *parent) :
