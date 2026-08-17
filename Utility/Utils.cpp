@@ -190,11 +190,11 @@ QString Utils::GetPlatformFromScatter(const QString& scatter_file)
     QRegExp regex("[m|M][t|T](\\d{4})");
     if(regex.indexIn(short_name)!= -1){
         QString platform_id = regex.cap(1);
-        LOG("get platform from scatter: MT%s",platform_id.toAscii().constData());
+        LOG("get platform from scatter: MT%s",platform_id.toUtf8().constData());
         return "MT"+platform_id;
     }
-    LOG("[Error]get platform from scatter failed!(%s)", scatter_file.toAscii().constData());
-    return QString::null;
+    LOG("[Error]get platform from scatter failed!(%s)", scatter_file.toUtf8().constData());
+    return QString();
 }
 
 HW_StorageType_E Utils::GetStorageTypeFromScatter(const QString& scatter_file)
@@ -474,7 +474,7 @@ QString Utils::ULLToHex(U64 src, unsigned int size)
        snprintf(buf, size, "0x%016llx", src);
      #endif
 
-     return QString::fromAscii(buf);
+     return QString::fromUtf8(buf);
 }
 
 int Utils::GetRomFilesTotalSize(DL_HANDLE_T &dl_handle, U64 *file_size)
