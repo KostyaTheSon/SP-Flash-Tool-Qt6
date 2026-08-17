@@ -4,9 +4,7 @@
 #include <QString>
 #include <QDir>
 #include <QImage>
-#if QT_VERSION >= 0x060000
 #include <QTextCodec>
-#endif
 #include <sstream>
 #include <map>
 #include "../BootRom/brom.h"
@@ -108,10 +106,8 @@ QImage AddStringToImage(const QString& imagePath, const QString& str, const QStr
 bool parserJSONFile(const QString filePath, QtJson::JsonObject &jsonObject);
 
 inline void SetTextCodec(void) {
-#if QT_VERSION >= 0x060000
-    // Qt6 doesn't have these functions anymore - they are deprecated
-    // Text encoding is handled automatically in Qt6
-#else
+#if QT_VERSION < 0x050600
+    // Only available in Qt versions before 5.6
 #ifdef _WIN32
     QTextCodec *coder = QTextCodec::codecForName("System");
 #else

@@ -1,72 +1,42 @@
 ```
-# Qt/Meta build files
-.qmake.stash
-*.pro.user
-*.pro.user.*
-*.prl
-*.moc
-moc_*
-*.qm
-*.qrc
-*.ui
-*.pri
-
-# Build directories
+# Compiled and build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.out
 build/
 dist/
-release/
-debug/
 
-# Temporary files
-*.tmp
-*.temp
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
+
+# Logs and temp files
 *.log
+*.tmp
+*.swp
 
-# Environment files
+# Environment
 .env
 .env.local
 *.env.*
 
-# Editor/IDE files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS files
+# System files
 .DS_Store
 Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-*.coverage
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Node.js
-node_modules/
-
-# Virtual environments
-venv/
-.venv/
-.env/
-
-# MyPy
-.mypy_cache/
-
-# Pytest
-.pytest_cache/
-
-# Gradle
-.gradle/
-
-# Target directories
-target/
 
 # Compressed files
 *.zip
@@ -87,8 +57,4 @@ target/
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
 ```
