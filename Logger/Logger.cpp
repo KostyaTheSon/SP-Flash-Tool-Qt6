@@ -15,6 +15,9 @@
 #include <cassert>
 #include <stdarg.h>
 #include <sys/types.h>
+#include <cwchar>
+#include <locale>
+#include <codecvt>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -202,6 +205,30 @@ void LoggerImpl::Put(T obj) {
                 if (it->OutStream)
                 {
                     *(it->OutStream) << obj;
+                    it->OutStream->flush();
+                }
+            }
+        }
+    }
+}
+
+// Specialization for const wchar_t* to convert to UTF-8 string before logging
+template<>
+void LoggerImpl::Put<const wchar_t*>(const wchar_t* obj) {
+    if (!Suppressed())
+    {
+        // Convert wide string to UTF-8 string
+        std::wstring ws(obj);
+        std::string utf8_string(ws.begin(), ws.end());
+        
+        for (list<LogHandle>::const_iterator it = m_LogHandles.begin(); it
+             != m_LogHandles.end(); ++it)
+        {
+            if (m_CurLevel >= it->HandleLevel)
+            {
+                if (it->OutStream)
+                {
+                    *(it->OutStream) << utf8_string;
                     it->OutStream->flush();
                 }
             }
