@@ -5,9 +5,7 @@
 #QT -= gui
 TARGET = flash_tool
 QT    += xml
-QT += network widgets
-greaterThan(QT_MAJOR_VERSION, 5): QT += webenginewidgets
-else: QT += webkitwidgets
+QT += network widgets webenginewidgets
 #QT += testlib
 
 # CONFIG   += console
