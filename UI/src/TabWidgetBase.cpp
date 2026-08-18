@@ -1,5 +1,5 @@
 #include "TabWidgetBase.h"
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 
 TabWidgetBase::TabWidgetBase(int index, const QString& name, QTabWidget *parent) :
     QTabWidget(parent),
