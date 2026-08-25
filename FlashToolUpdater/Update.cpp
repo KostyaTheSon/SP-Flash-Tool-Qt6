@@ -127,10 +127,10 @@ bool Update::CheckNewVersion()
 
             newVersion = latestVer;
 
-            newVersionFolder = ReleaseFolder + QDir::separator().toAscii() + latestVer;
-            newVersionPackage = newVersionFolder + QDir::separator().toAscii() + files.front();
+            newVersionFolder = ReleaseFolder + QDir::separator().toUtf8() + latestVer;
+            newVersionPackage = newVersionFolder + QDir::separator().toUtf8() + files.front();
 
-            ReadReleaseNotes(newVersionFolder + QDir::separator().toAscii() + ReleaseNote);
+            ReadReleaseNotes(newVersionFolder + QDir::separator().toUtf8() + ReleaseNote);
 
             InitUpdaterPackageInfo(newVersionPackage.c_str());
 

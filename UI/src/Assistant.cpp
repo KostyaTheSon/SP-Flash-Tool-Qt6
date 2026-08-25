@@ -1,7 +1,7 @@
 #include "Assistant.h"
 #include <QLibraryInfo>
 #include <QDir>
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QDesktopServices>
 #include "MainWindow.h"
 #include "../../Utility/FileUtils.h"

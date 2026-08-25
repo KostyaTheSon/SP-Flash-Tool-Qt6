@@ -4,7 +4,7 @@
 #include <QDir>
 #include <QStringList>
 #include <QMessageBox>
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QTextStream>
 #include <QSettings>
 #include <algorithm>

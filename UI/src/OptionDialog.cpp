@@ -1066,7 +1066,7 @@ void OptionDialog::SetCurrentKey(int row)
     }
     else if(keyBorad.at(0).isLetter())
     {
-        index = keyBorad.at(0).toAscii() - 'A' + 12;
+        index = keyBorad.at(0).toUtf8() - 'A' + 12;
     }
     else
     {

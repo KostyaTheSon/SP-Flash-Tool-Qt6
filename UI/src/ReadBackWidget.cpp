@@ -393,7 +393,7 @@ NUTL_ReadFlag_E ReadBackWidget::ParseReadFlag(const QString &flag_str)
     }
     else
     {
-        LOG("Unknown read flag: %s",flag_str.constData()->toAscii());
+        LOG("Unknown read flag: %s",flag_str.toUtf8().constData());
         ret = NUTL_READ_FLAG_END;
         Q_ASSERT(0 && "unknown read flag");
     }

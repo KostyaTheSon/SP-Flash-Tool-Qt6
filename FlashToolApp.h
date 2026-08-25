@@ -2,7 +2,7 @@
 #define FLASHTOOLAPP_H
 
 #include <QObject>
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 class FlashToolApp : public QApplication
 {

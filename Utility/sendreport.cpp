@@ -4,7 +4,7 @@
 #include <QFileInfo>
 #include <QFileInfoList>
 #include <QPixmap>
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QDesktopWidget>
 #include "../UI/src/MainWindow.h"
 
